@@ -24,7 +24,7 @@ int main()
     Symbol();
     long long A,B,C;
     cin >> A >> B >> C;
-    cout << wartosciTrojkata[A+B+C][A]*wartosciTrojkata[B+C][B]<<endl;
+    cout << wartosciTrojkata[A+B+C][A]*wartosciTrojkata[B+C][B]%1000000007<<endl;
     return 0;
 }
 
