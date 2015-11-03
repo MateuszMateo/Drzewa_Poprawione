@@ -9,7 +9,7 @@ long long Symbol(){
         wartosciTrojkata[N][0] = 1;
         wartosciTrojkata[N][N] = 1;
       for(int K=1; K <= N-1; ++K) {
-        wartosciTrojkata[N][K] = wartosciTrojkata[N-1][K-1] + wartosciTrojkata[N-1][K];
+        wartosciTrojkata[N][K] = (wartosciTrojkata[N-1][K-1] + wartosciTrojkata[N-1][K])%1000000007;
 
 
     }
@@ -24,7 +24,7 @@ int main()
     Symbol();
     long long A,B,C;
     cin >> A >> B >> C;
-    cout << wartosciTrojkata[A+B+C][A]*wartosciTrojkata[B+C][B]%1000000007<<endl;
+    cout << wartosciTrojkata[A+B+C][A]*wartosciTrojkata[B+C][B]<<endl;
     return 0;
 }
 
